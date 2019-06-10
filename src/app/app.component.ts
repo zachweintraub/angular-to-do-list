@@ -13,13 +13,19 @@ export class AppComponent {
   month: number = this.currentDate.getMonth() + 1;
   day: number = this.currentDate.getDate();
   year: number = this.currentDate.getFullYear();
-
-  tasks: Task[] = [
-    new Task("Get a job you hobo", new Date(2019,5,14)),
-    new Task("Eat Lunch", new Date(2109,5,10)),
-    new Task("Take a nap", new Date(2019,5,10))
-  ] 
   
+  tasks: Task[] = [
+    new Task("Get a job you hobo", new Date(2019,5,12), 1),
+    new Task("Eat Lunch", new Date(2109,5,10), 3),
+    new Task("Take a nap", new Date(2019,5,10), 2),
+    new Task("Figure it all out", new Date(2020,0,1),1)
+  ]
+  
+  selectedTask: Task = this.tasks[0];
+
+  selectTask(task){
+    this.selectedTask = task;
+  }
 }
 
 
