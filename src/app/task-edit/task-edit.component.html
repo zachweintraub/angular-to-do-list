@@ -1,0 +1,15 @@
+<div *ngIf="childSelectedTask">
+    <h3>{{childSelectedTask.description}}</h3>
+    <p>Task Complete? {{childSelectedTask.done}}</p>
+    <h3>Edit Task</h3>
+    <label>Enter Task Description:</label>
+    <input [(ngModel)]="childSelectedTask.description">
+    <label>Enter Task Priority (1-3):</label>
+    <br>
+    <select [(ngModel)]="childSelectedTask.priority">
+      <option value="1">High Priority</option>
+      <option value="2">Medium Priority</option>
+      <option value="3">Low Priority</option>
+    </select>
+    <button (click)="saveButtonClicked()">Save</button><button (click)="deleteTask(childSelectedTask)">Delete</button>
+</div>

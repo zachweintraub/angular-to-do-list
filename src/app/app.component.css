@@ -2,15 +2,3 @@ h1{
     color: green;
     border-style: double;
 }
-
-.priority-high {
-    background: rgb(241, 137, 137);
-}
-
-.priority-medium {
-    background: rgb(241, 217, 137);
-}
-
-.priority-low {
-    background: rgb(154, 241, 137);
-}
