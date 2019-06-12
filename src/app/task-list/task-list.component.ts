@@ -13,10 +13,15 @@ export class TaskListComponent implements OnInit {
   @Input() childTaskList: Task[];
   @Output() clickSender = new EventEmitter();
 
-  filterByCompleteness: string = "incompleteTasks";
+  filterByCompleteness: string = "allTasks";
+  filterByPriority: string = "allPriorities"
 
-  onChange(optionFromMenu){
+  onCompletenessChange(optionFromMenu){
     this.filterByCompleteness = optionFromMenu;
+  }
+
+  onPriorityChange(optionFromMenu){
+    this.filterByPriority = optionFromMenu;
   }
 
   editButtonClicked(task: Task) {

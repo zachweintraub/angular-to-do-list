@@ -7,6 +7,7 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { TaskEditComponent } from './task-edit/task-edit.component';
 import { TaskNewComponent } from './task-new/task-new.component';
 import { CompletenessPipe } from './completeness.pipe';
+import { PriorityPipe } from './priority.pipe';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CompletenessPipe } from './completeness.pipe';
     TaskListComponent,
     TaskEditComponent,
     TaskNewComponent,
-    CompletenessPipe
+    CompletenessPipe,
+    PriorityPipe
   ],
 
   //import other modules
