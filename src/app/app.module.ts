@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskEditComponent } from './task-edit/task-edit.component';
 import { TaskNewComponent } from './task-new/task-new.component';
+import { CompletenessPipe } from './completeness.pipe';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { TaskNewComponent } from './task-new/task-new.component';
     AppComponent,
     TaskListComponent,
     TaskEditComponent,
-    TaskNewComponent
+    TaskNewComponent,
+    CompletenessPipe
   ],
 
   //import other modules

@@ -13,6 +13,12 @@ export class TaskListComponent implements OnInit {
   @Input() childTaskList: Task[];
   @Output() clickSender = new EventEmitter();
 
+  filterByCompleteness: string = "incompleteTasks";
+
+  onChange(optionFromMenu){
+    this.filterByCompleteness = optionFromMenu;
+  }
+
   editButtonClicked(task: Task) {
     this.clickSender.emit(task);
   }
@@ -28,6 +34,11 @@ export class TaskListComponent implements OnInit {
         return 'priority-low';
     }
   }
+
+  toggleDone(task: Task, done: boolean){
+    task.done = done;
+  }
+
   constructor() { }
 
   ngOnInit() {
